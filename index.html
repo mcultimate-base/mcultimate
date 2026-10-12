@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b100d">
+
+    <title>Minecraft Ultimate | Your Minecraft Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- GOOGLE LOGIN SCREEN -->
+    <section id="loginScreen" class="login-screen">
+        <div class="login-background" aria-hidden="true">
+            <span class="login-block login-block-one">🟩</span>
+            <span class="login-block login-block-two">💎</span>
+            <span class="login-block login-block-three">🟪</span>
+            <span class="login-block login-block-four">🟫</span>
+        </div>
+
+        <div class="login-card">
+            <div class="login-logo">⛏️</div>
+
+            <p class="eyebrow">YOUR ADVENTURE STARTS HERE</p>
+
+            <h1>MINECRAFT <span>ULTIMATE</span></h1>
+
+            <p class="login-description">
+                Your world. Your journey. Your Minecraft adventure.
+            </p>
+
+            <div class="login-divider">
+                <span>PLAYER AUTHENTICATION</span>
+            </div>
+
+            <button id="googleSignInButton"
+                    class="google-button"
+                    type="button">
+                <svg viewBox="0 0 48 48"
+                     width="22"
+                     height="22"
+                     aria-hidden="true">
+                    <path fill="#EA4335"
+                          d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"
+                          transform="translate(0 4)"/>
+                    <path fill="#4285F4"
+                          d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.73 7.18l7.64 5.93c4.46-4.13 7.13-10.21 7.13-17.58z"
+                          transform="translate(0 -1)"/>
+                    <path fill="#FBBC05"
+                          d="M10.53 28.59a14.4 14.4 0 0 1 0-9.18l-7.98-6.19a23.94 23.94 0 0 0 0 21.56z"
+                          transform="translate(0 1)"/>
+                    <path fill="#34A853"
+                          d="M24 48c6.48 0 11.93-2.13 15.9-5.8l-7.65-5.93c-2.13 1.43-4.85 2.27-8.25 2.27-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"
+                          transform="translate(0 -4)"/>
+                </svg>
+
+                <span>Continue with Google</span>
+            </button>
+
+            <p id="loginMessage"
+               class="login-message"
+               role="status"
+               aria-live="polite"></p>
+
+            <div class="login-security">
+                <span>🔒</span>
+                <span>Secure sign-in powered by Firebase</span>
+            </div>
+
+            <p class="login-disclaimer">
+                Sign in with your Google account to enter the hub.
+            </p>
+        </div>
+
+        <p class="login-footer">
+            MINECRAFT ULTIMATE <span>•</span> PLAYER ACCESS
+        </p>
+    </section>
+
+
+    <!-- WEBSITE CONTENT: VISIBLE AFTER LOGIN -->
+    <div id="appContent" hidden>
+
+        <header class="navbar">
+            <a class="logo" href="#home">
+                <span class="logo-icon">⛏</span>
+                <span>MINECRAFT <b>ULTIMATE</b></span>
+            </a>
+
+            <div class="search-box">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search mobs, blocks, tools..."
+                    aria-label="Search Minecraft Ultimate"
+                >
+                <button id="searchButton" aria-label="Search">⌕</button>
+            </div>
+
+            <div class="account-menu">
+                <img id="navbarAvatar"
+                     class="navbar-avatar"
+                     alt="Google profile picture"
+                     hidden>
+
+                <span id="navbarName" class="navbar-name">Player</span>
+
+                <button id="signOutButton"
+                        class="sign-out-button"
+                        type="button">
+                    Sign out
+                </button>
+            </div>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Toggle navigation">☰</button>
+        </header>
+
+        <div class="layout">
+
+            <aside class="sidebar" id="sidebar">
+                <p class="menu-title">MAIN MENU</p>
+
+                <a href="#home" class="nav-link active">🏠 Dashboard</a>
+                <a href="#visuals" class="nav-link">🌿 Visuals & Packs</a>
+                <a href="#quiz" class="nav-link">🧠 Quiz Arena</a>
+                <a href="#tools" class="nav-link">⚒️ Minecraft Tools</a>
+                <a href="#encyclopedia" class="nav-link">📚 Encyclopedia</a>
+                <a href="#profile" class="nav-link">👤 Player Profile</a>
+
+                <div class="sidebar-bottom">
+                    <div class="player-card">
+                        <img id="sidebarAvatar"
+                             class="player-avatar-image"
+                             alt="Player profile picture"
+                             hidden>
+
+                        <div class="player-avatar" id="sidebarDefaultAvatar">⛏️</div>
+
+                        <div class="player-card-details">
+                            <strong id="sidebarPlayerName">Explorer</strong>
+                            <p id="sidebarPlayerLevel">Level 1 Player</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="main-content">
+
+                <section class="hero" id="home">
+                    <div class="hero-content">
+                        <span class="badge">YOUR ADVENTURE STARTS HERE</span>
+
+                        <h1>WELCOME TO<br>
+                            <span>MINECRAFT ULTIMATE</span>
+                        </h1>
+
+                        <p>
+                            Explore Minecraft, discover incredible visuals,
+                            master crafting, and prove your knowledge.
+                        </p>
+
+                        <a href="#quiz" class="primary-button">
+                            ENTER QUIZ ARENA →
+                        </a>
+                    </div>
+
+                    <div class="hero-decoration" aria-hidden="true">
+                        <div class="floating-block block-one">🟩</div>
+                        <div class="floating-block block-two">💎</div>
+                        <div class="floating-block block-three">🟫</div>
+                        <div class="floating-block block-four">🟪</div>
+                    </div>
+                </section>
+
+               
+            
+
+                <section class="section" id="visuals">
+                    <p class="eyebrow">UPGRADE YOUR WORLD</p>
+                    <h2>Visuals & Resource Packs</h2>
+
+                    <div class="content-panel">
+                        <h3>🌿 Transform Your Minecraft</h3>
+                        <p>
+                            Discover realistic textures, colorful resource packs,
+                            performance-friendly visuals and shader information.
+                        </p>
+                        <p class="muted">
+                            Pack listings and download links will be added in
+                            the next development phase.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="section" id="quiz">
+                    <p class="eyebrow">TEST YOUR KNOWLEDGE</p>
+                    <h2>Quiz Arena</h2>
+
+                    <div class="content-panel quiz-panel">
+                        <span class="badge">HARDCORE CHALLENGE</span>
+                        <h3>Ready to prove yourself?</h3>
+                        <p>
+                            Put your Minecraft knowledge to the test.
+                        </p>
+
+                        <button class="primary-button" id="quizButton">
+                            START CHALLENGE →
+                        </button>
+
+                        <div id="quizArea" hidden>
+                            <p id="questionText"></p>
+
+                            <form id="quizForm">
+                                <input id="answerInput"
+                                       type="text"
+                                       placeholder="Type your answer..."
+                                       autocomplete="off"
+                                       required>
+
+                                <button class="primary-button" type="submit">
+                                    SUBMIT ANSWER
+                                </button>
+                            </form>
+
+                            <p id="quizFeedback" aria-live="polite"></p>
+                            <p id="quizScore">Score: 0</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section" id="tools">
+                    <p class="eyebrow">PLAY SMARTER</p>
+                <h2>Minecraft Recipes</h2>
+
+                    <div class="feature-grid">
+                        <a href="#potion" class="feature-card">
+                            <div class="feature-icon">🧪</div>
+                            <h3>Potion Lab</h3>
+                            <p>Explore brewing recipes and potion effects.</p>
+                        </a>
+
+                        <a href="#crafting" class="feature-card">
+                            <div class="feature-icon">🪓</div>
+                            <h3>Crafting Guide</h3>
+                            <p>Find crafting recipes and item information.</p>
+                        </a>
+
+                        <a href="#enchantments" class="feature-card">
+                            <div class="feature-icon">✨</div>
+                            <h3>Enchantments</h3>
+                            <p>Explore enchantment effects and compatibility.</p>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="section" id="encyclopedia">
+                    <p class="eyebrow">KNOW YOUR WORLD</p>
+                    <h2>Minecraft Encyclopedia</h2>
+
+                    <div class="content-panel">
+                        <h3>📚 Your Minecraft Knowledge Base</h3>
+                        <p>
+                            Browse information about mobs, blocks, items,
+                            biomes, structures and villager professions.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="section" id="profile">
+                    <p class="eyebrow">YOUR JOURNEY</p>
+                    <h2>Player Profile</h2>
+
+                    <div class="content-panel profile-panel">
+                        <div class="profile-identity">
+                            <img id="profileAvatar"
+                                 class="profile-avatar"
+                                 alt="Google profile picture"
+                                 hidden>
+
+                            <div>
+                                <h3 id="profileName">Explorer</h3>
+                                <p id="profileEmail"></p>
+                            </div>
+                        </div>
+
+                        <p>XP: <strong id="profileXP">0</strong></p>
+                        <p>Quiz score: <strong id="profileScore">0</strong></p>
+                        <p>Rank: <strong id="profileRank">Wooden Pickaxe</strong></p>
+                    </div>
+                </section>
+
+                <footer>
+                    <p>© 2026 Minecraft Ultimate — Built for Minecraft fans.</p>
+                    <p>Not affiliated with or endorsed by Mojang or Microsoft.</p>
+                </footer>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Firebase and website JavaScript -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
